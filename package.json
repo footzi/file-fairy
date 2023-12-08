@@ -1,21 +1,37 @@
 {
   "name": "file-fairy",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "author": "Vladislav Manakov",
-  "description": "Magical file generator for",
+  "description": "Magical file generator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/footzi/file-fairy"
+  },
   "bin": {
     "ff": "src/index.js"
   },
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "FF_NODE_ENV=dev ./src/index.js",
+    "lint": "eslint --ext .js src/"
   },
   "keywords": [],
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "handlebars": "^4.7.8"
   },
   "devDependencies": {
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-n": "^16.3.1",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "pre-commit": "^1.2.2",
     "prettier": "^3.1.0"
-  }
+  },
+  "pre-commit": [
+    "lint"
+  ]
 }

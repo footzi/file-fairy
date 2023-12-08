@@ -1,6 +1,5 @@
 const path = require('path');
 const FS = require('./FS');
-const Logger = require('./Logger');
 
 class Config {
   constructor() {
@@ -11,12 +10,12 @@ class Config {
 
   set() {
     try {
-      const defaultConfigPath = path.resolve('./src/default.config.json');
+      const defaultConfigPath = path.resolve(__dirname, '../default.config.json');
 
       // @todo get loca config and merge
       this.config = JSON.parse(FS.readFileSync(defaultConfigPath));
     } catch (err) {
-      Logger.error(`Error set config ${err.message}`);
+      throw new Error(`Error set config ${err.message}`);
     }
   }
 
