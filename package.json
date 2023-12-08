@@ -1,0 +1,21 @@
+{
+  "name": "file-fairy",
+  "version": "0.0.1",
+  "author": "Vladislav Manakov",
+  "description": "Magical file generator for",
+  "bin": {
+    "ff": "src/index.js"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.7.8"
+  },
+  "devDependencies": {
+    "prettier": "^3.1.0"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "alias": "avt",
+  "files": [
+    {
+      "template": "component.hbs",
+      "fileName": "index.tsx"
+    },
+    {
+      "template": "test.hbs",
+      "folderPath": "__spec__",
+      "fileName": "index.spec.ts"
+    },
+    {
+      "template": "styles.hbs",
+      "fileName": "index.css"
+    }
+  ]
+}

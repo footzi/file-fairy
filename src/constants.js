@@ -1,0 +1,18 @@
+const COMMANDS = {
+  GENERATE_DEFAULT_TEMPLATE: 'g',
+  GENERATE_CUSTOM_TEMPLATE: 'gc',
+};
+
+const TEMPLATES = {
+  REACT_TS_COMPONENTS: 'react-ts-component',
+};
+
+const TEMPLATES_ALIAS = {
+  [TEMPLATES.REACT_TS_COMPONENTS]: 'rtc',
+};
+
+module.exports = {
+  COMMANDS,
+  TEMPLATES,
+  TEMPLATES_ALIAS,
+};

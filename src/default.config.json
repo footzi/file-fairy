@@ -1,0 +1,7 @@
+{
+  "templates": {
+    "react-ts-component": {
+      "useCssModules": false
+    }
+  }
+}
