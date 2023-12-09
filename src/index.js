@@ -3,6 +3,7 @@ const Logger = require('./utils/Logger');
 const CLI = require('./utils/CLI');
 const config = require('./utils/Config');
 const Template = require('./utils/Template');
+const Common = require('./utils/Common');
 
 const { COMMANDS, TEMPLATES, TEMPLATES_ALIAS, OPTIONS_ALIAS } = require('./constants');
 
@@ -61,6 +62,14 @@ const init = () => {
         throw new Error('Unknown option for set');
       }
     });
+
+    return;
+  }
+
+  if (command === COMMANDS.VERSION) {
+    const version = Common.getVersion();
+
+    Logger.info(`The current version of file-fairy is ${version}`);
 
     return;
   }
