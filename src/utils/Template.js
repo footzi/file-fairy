@@ -7,6 +7,10 @@ const config = require('./Config');
 const { OPTIONS } = require('../constants');
 
 class Template {
+  static CONFIG_FILE_NAME = 'config.json';
+  static DEFAULT_CUSTOM_TEMPLATES_FOLDER = '../../../../.ff-templates'; // from node-modules
+  static DEV_CUSTOM_TEMPLATES_FOLDER = '../../custom-templates'; // from node-modules
+
   static getCustomTemplates() {
     try {
       const templates = {};
@@ -15,7 +19,7 @@ class Template {
       const filesInTemplateFolder = FS.readFilesInFolder(customTemplateFolder);
 
       filesInTemplateFolder.forEach((file) => {
-        if (file.name === 'config.json') {
+        if (file.name === Template.CONFIG_FILE_NAME) {
           const content = JSON.parse(file.content);
 
           if (content.alias) {
@@ -101,9 +105,9 @@ class Template {
 
     const prodPath = conf[OPTIONS.CUSTOM_TEMPLATES_FOLDER]
       ? path.resolve(conf[OPTIONS.CUSTOM_TEMPLATES_FOLDER])
-      : path.resolve(__dirname, '../../../../ff-templates');
+      : path.resolve(__dirname, Template.DEFAULT_CUSTOM_TEMPLATES_FOLDER);
 
-    return isDev ? path.resolve(__dirname, '../../custom-templates') : prodPath;
+    return isDev ? path.resolve(__dirname, Template.DEV_CUSTOM_TEMPLATES_FOLDER) : prodPath;
   }
 }
 
