@@ -47,6 +47,22 @@ class CLI {
       throw new Error('Error getting component name');
     }
   }
+
+  static getParams() {
+    const args = CLI.getArgs();
+    const params = {};
+
+    args.forEach((arg) => {
+      const [key, value] = arg.split('=');
+
+      if (key.startsWith('--')) {
+        const paramName = key.slice(2);
+        params[paramName] = value || true;
+      }
+    });
+
+    return params;
+  }
 }
 
 module.exports = CLI;

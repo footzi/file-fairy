@@ -1,8 +1,9 @@
 # Changelog
 
 ### 0.0.3
-- fix generate custom templates
-- fix code styles
+- added support to set path for custom templates
+- fixed to generate custom templates
+- fixed code styles
 
 ### 0.0.2
 - minor changes

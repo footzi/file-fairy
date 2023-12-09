@@ -1,7 +1,10 @@
-const FS = require('./FS');
-const Logger = require('./Logger');
 const path = require('path');
 const Handlebars = require('handlebars');
+
+const FS = require('./FS');
+const Logger = require('./Logger');
+const config = require('./Config');
+const { OPTIONS } = require('../constants');
 
 class Template {
   static getCustomTemplates() {
@@ -28,7 +31,7 @@ class Template {
 
       return templates;
     } catch (err) {
-      throw new Error(`Error create custom templates: ${err.message}`);
+      throw new Error(`Error read custom templates: ${err.message}`);
     }
   }
 
@@ -93,11 +96,14 @@ class Template {
   }
 
   static getCustomTemplatesFolder() {
-    const isDev = process.env.FF_NODE_ENV === 'dev';
+    const isDev = process.env.FF_NODE_ENV === 'devil';
+    const conf = config.get();
 
-    return isDev
-      ? path.resolve(__dirname, '../../custom-templates')
+    const prodPath = conf[OPTIONS.CUSTOM_TEMPLATES_FOLDER]
+      ? path.resolve(conf[OPTIONS.CUSTOM_TEMPLATES_FOLDER])
       : path.resolve(__dirname, '../../../../ff-templates');
+
+    return isDev ? path.resolve(__dirname, '../../custom-templates') : prodPath;
   }
 }
 

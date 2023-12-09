@@ -13,6 +13,7 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "FF_NODE_ENV=dev ./src/index.js",
+    "no-dev": "./src/index.js",
     "lint": "eslint --ext .js src/"
   },
   "keywords": [],
