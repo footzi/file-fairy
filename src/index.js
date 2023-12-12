@@ -66,7 +66,7 @@ const init = () => {
     return;
   }
 
-  if (command === COMMANDS.VERSION) {
+  if (command === COMMANDS.VERSION || command === COMMANDS.VERSION_SHORT) {
     const version = Common.getVersion();
 
     Logger.info(`The current version of file-fairy is ${version}`);

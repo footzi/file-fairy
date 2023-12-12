@@ -16,7 +16,7 @@ And then configure it from cli:
 1. `ff g {alias} {path}` - generate default template
 2. `ff gc {alias} {path}` - generate your custom template
 3. `ff set {key=value}` - set options
-4. `ff v` - show version
+4. `ff version or -v` - show version
 
 ## Options
 1. `ff set --custom-templates-folder='/{path to folder}'` - set folder for your custom-templates

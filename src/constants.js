@@ -2,7 +2,8 @@ const COMMANDS = {
   GENERATE_DEFAULT_TEMPLATE: 'g',
   GENERATE_CUSTOM_TEMPLATE: 'gc',
   SET_OPTIONS: 'set',
-  VERSION: 'v',
+  VERSION: 'version',
+  VERSION_SHORT: '-v',
 };
 
 const TEMPLATES = {
