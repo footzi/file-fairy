@@ -1,5 +1,6 @@
 const path = require('path');
 const FS = require('./FS');
+const Logger = require('./Logger');
 
 class Config {
   constructor() {
@@ -35,6 +36,8 @@ class Config {
       const updatedJson = JSON.stringify(file, null, 2);
 
       FS.createFile(this.configPath, updatedJson);
+
+      Logger.info(`The option ${key} was successfully written`);
     } catch (err) {
       throw new Error(`Error write option ${err.message}`);
     }
