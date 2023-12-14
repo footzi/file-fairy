@@ -6,14 +6,6 @@ const COMMANDS = {
   VERSION_SHORT: '-v',
 };
 
-const TEMPLATES = {
-  REACT_TS_COMPONENTS: 'react-ts-component',
-};
-
-const TEMPLATES_ALIAS = {
-  [TEMPLATES.REACT_TS_COMPONENTS]: 'rtc',
-};
-
 const OPTIONS = {
   CUSTOM_TEMPLATES_FOLDER: 'custom-templates-folder',
 };
@@ -24,8 +16,6 @@ const OPTIONS_ALIAS = {
 
 module.exports = {
   COMMANDS,
-  TEMPLATES,
-  TEMPLATES_ALIAS,
   OPTIONS,
   OPTIONS_ALIAS,
 };

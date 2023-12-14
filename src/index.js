@@ -5,12 +5,14 @@ const config = require('./utils/Config');
 const Template = require('./utils/Template');
 const Common = require('./utils/Common');
 
-const { COMMANDS, TEMPLATES, TEMPLATES_ALIAS, OPTIONS_ALIAS } = require('./constants');
+const { COMMANDS, OPTIONS_ALIAS } = require('./constants');
 
-const getReactTsComponentTemplate = require('./templates/react-ts-component');
+const generateDefaultTemplate = require('./templates/index');
+const handleBarsHelpersInit = require('./handlebars-helpers/');
 
 const init = () => {
   const command = CLI.getCommand();
+  handleBarsHelpersInit();
 
   if (command === COMMANDS.GENERATE_CUSTOM_TEMPLATE) {
     const cliTemplate = CLI.getTemplate();
@@ -30,23 +32,7 @@ const init = () => {
   }
 
   if (command === COMMANDS.GENERATE_DEFAULT_TEMPLATE) {
-    const cliTemplate = CLI.getTemplate();
-    const cliPath = CLI.getPath();
-    const name = CLI.getComponentName(cliPath);
-
-    switch (cliTemplate) {
-      case TEMPLATES_ALIAS[TEMPLATES.REACT_TS_COMPONENTS]: {
-        const options = config.getTemplateConfig(TEMPLATES.REACT_TS_COMPONENTS);
-        const template = getReactTsComponentTemplate(options);
-        Template.generateTemplate(cliPath, name, template);
-
-        break;
-      }
-
-      default:
-        throw new Error('Unknown template');
-    }
-
+    generateDefaultTemplate();
     return;
   }
 

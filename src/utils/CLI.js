@@ -40,9 +40,8 @@ class CLI {
     try {
       const regex = /\/([^/]*)$/;
       const result = path.match(regex);
-      const string = result[1] ?? 'component';
 
-      return string.charAt(0).toUpperCase() + string.slice(1);
+      return result[1] ?? 'component';
     } catch (err) {
       throw new Error('Error getting component name');
     }
