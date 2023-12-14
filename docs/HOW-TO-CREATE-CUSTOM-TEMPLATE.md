@@ -32,4 +32,4 @@ You can create templates in `.ff-templates` folder in your project, or using any
 }
 ```
 
-See [default templates](https://github.com/footzi/file-fairy/blob/docs/HOW-TO-CREATE-CUSTOM-TEMPLATE.md) for example
+See [default templates](https://github.com/footzi/file-fairy/blob/main/docs/HOW-TO-CREATE-CUSTOM-TEMPLATE.md) for example
