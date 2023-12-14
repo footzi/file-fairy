@@ -1,18 +1,14 @@
 {
-  "alias": "rtc",
+  "alias": "rht",
   "files": [
     {
-      "template": "component.hbs",
-      "fileName": "index.tsx"
+      "template": "hook.hbs",
+      "fileName": "index.ts"
     },
     {
       "template": "test.hbs",
       "folderPath": "__spec__",
       "fileName": "index.spec.ts"
-    },
-    {
-      "template": "styles.hbs",
-      "fileName": "index.css"
     },
     {
       "template": "types.hbs",

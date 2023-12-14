@@ -1,0 +1,22 @@
+{
+  "alias": "rct",
+  "files": [
+    {
+      "template": "component.hbs",
+      "fileName": "index.tsx"
+    },
+    {
+      "template": "test.hbs",
+      "folderPath": "__spec__",
+      "fileName": "index.spec.tsx"
+    },
+    {
+      "template": "styles.hbs",
+      "fileName": "index.css"
+    },
+    {
+      "template": "types.hbs",
+      "fileName": "types.ts"
+    }
+  ]
+}

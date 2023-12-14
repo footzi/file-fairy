@@ -1,19 +1,23 @@
-const generateRTC = require('./react-ts-component');
+const generateRCT = require('./react-component-ts');
 const generateAFT = require('./arrow-function-ts');
+const generateRHT = require('./react-hook-ts');
 
 const TEMPLATES = {
-  REACT_TS_COMPONENTS: 'react-ts-component',
+  REACT_COMPONENTS_TS: 'react-component-ts',
   ARROW_FUNCTION_TS: 'arrow-function-ts',
+  REACT_HOOK_TS: 'react-hook-ts',
 };
 
 const TEMPLATES_ALIAS = {
-  [TEMPLATES.REACT_TS_COMPONENTS]: 'rtc',
+  [TEMPLATES.REACT_COMPONENTS_TS]: 'rct',
   [TEMPLATES.ARROW_FUNCTION_TS]: 'aft',
+  [TEMPLATES.REACT_HOOK_TS]: 'rht',
 };
 
 const GENERATORS = {
-  [[TEMPLATES_ALIAS[TEMPLATES.REACT_TS_COMPONENTS]]]: generateRTC,
+  [[TEMPLATES_ALIAS[TEMPLATES.REACT_COMPONENTS_TS]]]: generateRCT,
   [[TEMPLATES_ALIAS[TEMPLATES.ARROW_FUNCTION_TS]]]: generateAFT,
+  [[TEMPLATES_ALIAS[TEMPLATES.REACT_HOOK_TS]]]: generateRHT,
 };
 
 module.exports = {

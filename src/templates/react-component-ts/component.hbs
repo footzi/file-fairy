@@ -1,4 +1,4 @@
-import { React } from 'react';
+import React from 'react';
 import { {{ name }}Props } from './types';
 {{#if options.useCssModules}}
 import styles from './index.css';
@@ -6,10 +6,10 @@ import styles from './index.css';
 
 {{#if options.useCssModules}}
 export const {{ uppercaseFirstLetter name }}: React.FC<{{name}}Props> = (props) => {
-    return <h1 className={styles.root}>{{name}}</h1>
-}
+  return <h1 className={styles.root}>{{name}}</h1>;
+};
 {{else}}
 export const {{ uppercaseFirstLetter name }}: React.FC<{{name}}Props> = (props) => {
-    return <h1>{{name}}</h1>
-}
+  return <h1>{{name}}</h1>;
+};
 {{/if}}

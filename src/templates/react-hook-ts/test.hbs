@@ -1,0 +1,14 @@
+import { renderHook, act } from '@testing-library/react-hooks'
+import { {{name}} } from '../index';
+
+describe('{{name}}', () => {
+  it('should return correct result', () => {
+    const { result } = renderHook(() => {{name}}());
+
+    act(() => {
+      result.current.increment();
+    });
+
+    expect(result.current.count).toBe(1);
+  });
+});
