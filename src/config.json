@@ -1,8 +1,0 @@
-{
-  "templates": {
-    "react-ts-component": {
-      "useCssModules": false
-    }
-  },
-  "custom-templates-folder": ""
-}

@@ -9,19 +9,39 @@ const TEMPLATES = {
 };
 
 const TEMPLATES_ALIAS = {
-  [TEMPLATES.REACT_COMPONENTS_TS]: 'rct',
-  [TEMPLATES.ARROW_FUNCTION_TS]: 'aft',
-  [TEMPLATES.REACT_HOOK_TS]: 'rht',
+  rct: TEMPLATES.REACT_COMPONENTS_TS,
+  aft: TEMPLATES.ARROW_FUNCTION_TS,
+  rht: TEMPLATES.REACT_HOOK_TS,
 };
 
 const GENERATORS = {
-  [[TEMPLATES_ALIAS[TEMPLATES.REACT_COMPONENTS_TS]]]: generateRCT,
-  [[TEMPLATES_ALIAS[TEMPLATES.ARROW_FUNCTION_TS]]]: generateAFT,
-  [[TEMPLATES_ALIAS[TEMPLATES.REACT_HOOK_TS]]]: generateRHT,
+  [TEMPLATES.REACT_COMPONENTS_TS]: generateRCT,
+  [TEMPLATES.ARROW_FUNCTION_TS]: generateAFT,
+  [TEMPLATES.REACT_HOOK_TS]: generateRHT,
+};
+
+const OPTIONS = {
+  [TEMPLATES.REACT_COMPONENTS_TS]: [
+    { name: 'noStyle', alias: 'nost' },
+    { name: 'noTest', alias: 'notest' },
+    { name: 'noTypes', alias: 'notypes' },
+    { name: 'useTypesInComponent' },
+  ],
+  [TEMPLATES.REACT_HOOK_TS]: [
+    { name: 'noTest', alias: 'notest' },
+    { name: 'noTypes', alias: 'notypes' },
+    { name: 'useTypesInComponent' },
+  ],
+  [TEMPLATES.ARROW_FUNCTION_TS]: [
+    { name: 'noTest', alias: 'notest' },
+    { name: 'noTypes', alias: 'notypes' },
+    { name: 'useTypesInComponent' },
+  ],
 };
 
 module.exports = {
   TEMPLATES,
   TEMPLATES_ALIAS,
   GENERATORS,
+  OPTIONS,
 };

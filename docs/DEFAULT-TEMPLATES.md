@@ -3,6 +3,18 @@
 ### React Typescript component
 command: `ff g rct ./src/components/Test`
 
+name: `react-component-ts`
+
+cli options:
+- `--nost` - not generate style file
+- `--notest` - not generate test file
+- `--notypes` - not generate types file
+
+ff.config.json:
+- `noStyle` (`--nost` in cli) - never not generate style file and not import style file
+- `useTypesInComponent` - add types in component file and not generate types file
+- `rewriteFiles` - rewrite files section on default config. Every file option will be rewritten by template name
+
 The following files will be generated:
 
 `index.tsx`:
@@ -32,8 +44,25 @@ describe('Test', () => {
 });
 ```
 
+`index.css`:
+```css
+.root {
+
+}
+```
+
 ### React Typescript hook
 command: `ff g rht ./src/hooks/useTest`
+
+name: `react-hook-ts`
+
+cli options:
+- `--notest` - not generate test file
+- `--notypes` - not generate types file
+
+ff.config.json:
+- `useTypesInComponent` - add types in hook file and not generate types file
+- `rewriteFiles` - rewrite files section on default config. Every file option will be rewritten by template name
 
 The following files will be generated:
 
@@ -55,7 +84,7 @@ export interface UseTestResult {}
 
 `__spec__/index.spec.ts`:
 ```typescript
-import { renderHook, act } from '@testing-library/react-hooks'
+import { renderHook, act } from '@testing-library/react-hooks';
 import { useTest } from '../index';
 
 describe('useTest', () => {
@@ -73,6 +102,16 @@ describe('useTest', () => {
 
 ### Typescript arrow function
 command: `ff g aft ./src/utils/getTest`
+
+name: `react-hook-ts`
+
+cli options:
+- `--notest` - not generate test file
+- `--notypes` - not generate types file
+
+ff.config.json:
+- `useTypesInComponent` - add types in function file and not generate types file
+- `rewriteFiles` - rewrite files section on default config. Every file option will be rewritten by template name
 
 The following files will be generated:
 `index.tsx`:

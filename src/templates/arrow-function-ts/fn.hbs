@@ -1,4 +1,12 @@
+{{#if options.useTypesInComponent}}
+{{else}}
 import { {{uppercaseFirstLetter name}}Props, {{uppercaseFirstLetter name}}Result } from './types';
+{{/if}}
+{{#if options.useTypesInComponent}}
+interface {{uppercaseFirstLetter name}}Props {}
+
+interface {{uppercaseFirstLetter name}}Result {}
+{{/if}}
 
 export const {{name}} = (props: {{uppercaseFirstLetter name}}Props): {{uppercaseFirstLetter name}}Result => {
   return 'hello';

@@ -1,0 +1,15 @@
+{
+  "alias": "rc",
+  "files": [
+    {
+      "template": "component.hbs",
+      "fileName": "index.tsx",
+      "usePathName": true
+    },
+    {
+      "template": "styles.hbs",
+      "fileName": "index.scss",
+      "noGenerateKey": "nost"
+    }
+  ]
+}

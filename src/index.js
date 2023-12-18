@@ -13,17 +13,19 @@ const handleBarsHelpersInit = require('./handlebars-helpers/');
 const init = () => {
   const command = CLI.getCommand();
   handleBarsHelpersInit();
+  config.init();
 
   if (command === COMMANDS.GENERATE_CUSTOM_TEMPLATE) {
     const cliTemplate = CLI.getTemplate();
     const cliPath = CLI.getPath();
     const name = CLI.getComponentName(cliPath);
+    const variables = CLI.getParams();
 
-    const templates = Template.getCustomTemplates(config.get());
+    const templates = Template.getCustomTemplates();
     const template = templates[cliTemplate];
 
     if (template) {
-      Template.generateTemplate(cliPath, name, template);
+      Template.generateTemplate({ cliPath, name, template, variables });
     } else {
       throw new Error('Unknown custom template');
     }

@@ -1,20 +1,27 @@
 const path = require('path');
 const FS = require('./FS');
 const Logger = require('./Logger');
+const { OPTIONS: TEMPLATE_OPTIONS } = require('../templates/constants');
 
 class Config {
+  static DEFAULT_CONFIG_PATH = '../default.config.json';
+  static CUSTOM_CONFIG_FILE_NAME = '../../../../ff.config.json';
+
   constructor() {
     this.config = {};
-    this.configPath = path.resolve(__dirname, '../config.json');
-
-    this.set();
+    this.configPath = path.resolve(__dirname, Config.DEFAULT_CONFIG_PATH);
   }
 
-  set() {
+  init() {
     try {
-      this.config = JSON.parse(FS.readFileSync(this.configPath));
+      const localConfig = JSON.parse(FS.readFileSync(path.resolve(__dirname, Config.DEFAULT_CONFIG_PATH)));
+
+      const customConfigPath = path.resolve(__dirname, Config.CUSTOM_CONFIG_FILE_NAME);
+      const customConfig = FS.isExist(customConfigPath) ? JSON.parse(FS.readFileSync(customConfigPath)) : {};
+
+      this.config = { ...localConfig, ...customConfig };
     } catch (err) {
-      throw new Error(`Error set config ${err.message}`);
+      throw new Error(`Error init config: ${err.message}`);
     }
   }
 
@@ -22,10 +29,23 @@ class Config {
     return this.config;
   }
 
-  getTemplateConfig(name) {
-    const template = this.config.templates && this.config.templates[name];
+  getTemplateConfig(name, cliOptions) {
+    const defaultOptions = this.config.templates && this.config.templates[name];
+    const templateOptions = TEMPLATE_OPTIONS[name] ?? [];
 
-    return template ?? {};
+    const optionsFromCli = Object.entries(cliOptions).reduce((acc, [key, value]) => {
+      const option = templateOptions.find((o) => o.alias === key);
+
+      if (option) {
+        acc[option.name] = value;
+      } else {
+        throw new Error(`Unknown option ${key} for ${name} template`);
+      }
+
+      return acc;
+    }, {});
+
+    return { ...defaultOptions, ...optionsFromCli } ?? {};
   }
 
   writeOption(key, value) {

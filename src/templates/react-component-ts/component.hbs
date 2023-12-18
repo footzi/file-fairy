@@ -1,15 +1,23 @@
 import React from 'react';
+{{#if options.useTypesInComponent}}
+{{else}}
 import { {{ name }}Props } from './types';
-{{#if options.useCssModules}}
+{{/if}}
+{{#if options.noStyle}}
+{{else}}
 import styles from './index.css';
 {{/if}}
 
-{{#if options.useCssModules}}
+{{#if options.useTypesInComponent}}
+interface {{uppercaseFirstLetter name}}Props {}
+{{/if}}
+
+{{#if options.noStyle}}
 export const {{ uppercaseFirstLetter name }}: React.FC<{{name}}Props> = (props) => {
-  return <h1 className={styles.root}>{{name}}</h1>;
+  return <h1>{{name}}</h1>;
 };
 {{else}}
 export const {{ uppercaseFirstLetter name }}: React.FC<{{name}}Props> = (props) => {
-  return <h1>{{name}}</h1>;
+  return <h1 className={styles.root}>{{name}}</h1>;
 };
 {{/if}}

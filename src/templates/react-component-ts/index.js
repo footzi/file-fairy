@@ -1,17 +1,27 @@
-const path = require('path');
-const FS = require('../../utils/FS');
+const { readConfigFile, rewriteFiles } = require('../utils');
 
 const generate = (options) => {
-  const configPath = path.resolve(__dirname, 'config.json');
-  const template = JSON.parse(FS.readFileSync(configPath));
+  const template = readConfigFile(__dirname);
+  const rewrittenFiles = rewriteFiles(template.files, options.rewriteFiles);
 
-  const sortedFiles = template.files.filter((file) => {
-    return !(file.template === 'styles.hbs' && !options.useCssModules);
-  });
+  const files = rewrittenFiles.reduce((acc, file) => {
+    const isSkipFile =
+      file.noGenerate ||
+      (options.noStyle && file.template === 'styles.hbs') ||
+      (options.noTest && file.template === 'test.hbs') ||
+      (options.noTypes && file.template === 'types.hbs') ||
+      (options.useTypesInComponent && file.template === 'types.hbs');
+
+    if (!isSkipFile) {
+      acc.push(file);
+    }
+
+    return acc;
+  }, []);
 
   return {
     ...template,
-    files: sortedFiles,
+    files,
     folder: __dirname,
   };
 };

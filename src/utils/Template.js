@@ -5,11 +5,12 @@ const FS = require('./FS');
 const Logger = require('./Logger');
 const config = require('./Config');
 const { OPTIONS } = require('../constants');
+const { TEMPLATES_ALIAS } = require('../templates/constants');
 
 class Template {
   static CONFIG_FILE_NAME = 'config.json';
   static DEFAULT_CUSTOM_TEMPLATES_FOLDER = '../../../../.ff-templates'; // from node-modules
-  static DEV_CUSTOM_TEMPLATES_FOLDER = '../../custom-templates'; // from node-modules
+  static DEV_CUSTOM_TEMPLATES_FOLDER = '../../custom-template-examples'; // from dev
 
   static getCustomTemplates() {
     try {
@@ -39,22 +40,32 @@ class Template {
     }
   }
 
-  static generateTemplate(cliPath, name, template) {
+  static generateTemplate({ cliPath, name, template, options, variables = {} }) {
     try {
       Template.validateTemplateFormat(template);
 
       template.files.forEach((file) => {
+        const noGenerateKey = file.noGenerateKey;
+
+        if (variables[noGenerateKey]) {
+          return;
+        }
+
+        if (file.usePathName) {
+          file.fileName = file.fileName.replace(/^[^.]+/, name);
+        }
+
         Template.validateTemplateFileFormat(file);
 
         const pathToTemplate = path.resolve(`${template.folder}/${file.template}`);
         const templateSource = FS.readFileSync(pathToTemplate, 'utf8');
 
-        const content = Handlebars.compile(templateSource)({ name });
+        const content = Handlebars.compile(templateSource)({ name, ...variables, options });
 
         Template.writeTemplate(cliPath, file, content);
       });
     } catch (err) {
-      throw new Error(`Error generate custom templates: ${err.message}`);
+      throw new Error(`Error generate template: ${err.message}`);
     }
   }
 
@@ -100,7 +111,7 @@ class Template {
   }
 
   static getCustomTemplatesFolder() {
-    const isDev = process.env.FF_NODE_ENV === 'devil';
+    const isDev = process.env.FF_NODE_ENV === 'dev';
     const conf = config.get();
 
     const prodPath = conf[OPTIONS.CUSTOM_TEMPLATES_FOLDER]
@@ -108,6 +119,15 @@ class Template {
       : path.resolve(__dirname, Template.DEFAULT_CUSTOM_TEMPLATES_FOLDER);
 
     return isDev ? path.resolve(__dirname, Template.DEV_CUSTOM_TEMPLATES_FOLDER) : prodPath;
+  }
+
+  static getNameByAlias(alias) {
+    const name = TEMPLATES_ALIAS[alias];
+
+    if (!name) {
+      throw new Error(`Unknown template alias: ${alias}`);
+    }
+    return name;
   }
 }
 

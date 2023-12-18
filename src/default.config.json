@@ -1,0 +1,24 @@
+{
+  "templates": {
+    "react-component-ts": {
+      "noStyle": false,
+      "noTest": false,
+      "noTypes": false,
+      "useTypesInComponent": false,
+      "rewriteFiles": []
+    },
+    "react-hook-ts": {
+      "noTest": false,
+      "noTypes": false,
+      "useTypesInComponent": false,
+      "rewriteFiles": []
+    },
+    "arrow-function-ts": {
+      "noTest": false,
+      "noTypes": false,
+      "useTypesInComponent": true,
+      "rewriteFiles": []
+    }
+  },
+  "custom-templates-folder": ""
+}
