@@ -72,6 +72,26 @@ const TESTS = [
     ],
   },
   {
+    name: 'should write template with rewriteAlias option',
+    cli: ['', '', 'g', 'myAlias', './components/useGetData'],
+    folderName: 'components/useGetData',
+    configFile: {
+      templates: {
+        'react-hook-ts': {
+          noTest: true,
+          noTypes: true,
+          rewriteAlias: 'myAlias',
+        },
+      },
+    },
+    files: [
+      {
+        fileName: 'components/useGetData/index.ts',
+        content: readExpectedTemplate(__dirname, './__fixtures__/component-default'),
+      },
+    ],
+  },
+  {
     name: 'should write template with rewrite files, usePathName, noGenerate options',
     cli: ['', '', 'g', 'rht', './components/useGetData'],
     folderName: 'components/useGetData',

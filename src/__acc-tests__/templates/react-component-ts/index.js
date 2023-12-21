@@ -78,6 +78,27 @@ const TESTS = [
     ],
   },
   {
+    name: 'should write template with rewriteAlias option',
+    cli: ['', '', 'g', 'myAlias', './components/Test'],
+    folderName: 'components/Test',
+    configFile: {
+      templates: {
+        'react-component-ts': {
+          noTest: true,
+          noTypes: true,
+          noStyle: true,
+          rewriteAlias: 'myAlias',
+        },
+      },
+    },
+    files: [
+      {
+        fileName: 'components/Test/index.tsx',
+        content: readExpectedTemplate(__dirname, './__fixtures__/component-nostyle'),
+      },
+    ],
+  },
+  {
     name: 'should write template with rewrite files, usePathName, noGenerate options',
     cli: ['', '', 'g', 'rct', './components/Test'],
     folderName: 'components/Test',

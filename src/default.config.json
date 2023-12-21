@@ -5,19 +5,22 @@
       "useTypeAsKeyWord": false,
       "noStyle": false,
       "noTest": false,
-      "rewriteFiles": []
+      "rewriteFiles": [],
+      "rewriteAlias": ""
     },
     "react-hook-ts": {
       "noTest": false,
       "noTypes": false,
       "useTypesInComponent": false,
-      "rewriteFiles": []
+      "rewriteFiles": [],
+      "rewriteAlias": ""
     },
     "arrow-function-ts": {
       "noTest": false,
       "noTypes": false,
       "useTypesInComponent": false,
-      "rewriteFiles": []
+      "rewriteFiles": [],
+      "rewriteAlias": ""
     }
   },
   "custom-templates-folder": ""

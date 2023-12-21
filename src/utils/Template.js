@@ -123,7 +123,16 @@ class Template {
   }
 
   static getNameByAlias(alias) {
-    const name = TEMPLATES_ALIAS[alias];
+    const configTemplates = config.get().templates ?? {};
+    let rewrittenAlias = '';
+
+    Object.entries(configTemplates).forEach(([key, options]) => {
+      if (options.rewriteAlias) {
+        rewrittenAlias = key;
+      }
+    });
+
+    const name = rewrittenAlias || TEMPLATES_ALIAS[alias];
 
     if (!name) {
       throw new Error(`Unknown template alias: ${alias}`);

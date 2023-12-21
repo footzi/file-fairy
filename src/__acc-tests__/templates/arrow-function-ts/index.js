@@ -72,6 +72,26 @@ const TESTS = [
     ],
   },
   {
+    name: 'should write template with rewriteAlias option',
+    cli: ['', '', 'g', 'myAlias', './components/calc'],
+    folderName: 'components/calc',
+    configFile: {
+      templates: {
+        'arrow-function-ts': {
+          noTest: true,
+          noTypes: true,
+          rewriteAlias: 'myAlias',
+        },
+      },
+    },
+    files: [
+      {
+        fileName: 'components/calc/index.ts',
+        content: readExpectedTemplate(__dirname, './__fixtures__/component-default'),
+      },
+    ],
+  },
+  {
     name: 'should write template with rewrite files, usePathName, noGenerate options',
     cli: ['', '', 'g', 'aft', './components/calc'],
     folderName: 'components/calc',
