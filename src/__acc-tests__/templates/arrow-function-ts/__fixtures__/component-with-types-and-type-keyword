@@ -1,0 +1,7 @@
+type CalcProps = {}
+
+type CalcResult = {}
+
+export const calc = (props: CalcProps): CalcResult => {
+  return 'hello';
+};

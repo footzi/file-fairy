@@ -1,0 +1,5 @@
+import { UseGetDataProps, UseGetDataResult } from './types';
+
+export const useGetData = (props: UseGetDataProps): UseGetDataResult => {
+  return 'hello';
+};

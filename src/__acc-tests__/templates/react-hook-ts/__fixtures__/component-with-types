@@ -1,0 +1,7 @@
+interface UseGetDataProps {}
+
+interface UseGetDataResult {}
+
+export const useGetData = (props: UseGetDataProps): UseGetDataResult => {
+  return 'hello';
+};

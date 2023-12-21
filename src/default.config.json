@@ -1,10 +1,10 @@
 {
   "templates": {
     "react-component-ts": {
+      "useTypesInComponent": false,
+      "useTypeAsKeyWord": false,
       "noStyle": false,
       "noTest": false,
-      "noTypes": false,
-      "useTypesInComponent": false,
       "rewriteFiles": []
     },
     "react-hook-ts": {
@@ -16,7 +16,7 @@
     "arrow-function-ts": {
       "noTest": false,
       "noTypes": false,
-      "useTypesInComponent": true,
+      "useTypesInComponent": false,
       "rewriteFiles": []
     }
   },

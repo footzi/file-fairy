@@ -1,0 +1,10 @@
+import { calc } from '../index';
+
+describe('calc', () => {
+  it('should return correct result', () => {
+    const props = {};
+    const result = {};
+
+    expect(calc(props)).toEqual(result);
+  });
+});

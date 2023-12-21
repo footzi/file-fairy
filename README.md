@@ -39,7 +39,7 @@ You should take the following steps:
 3. Add `config.json` file with [contract](https://github.com/footzi/file-fairy/blob/main/docs/CONFIG-JSON.md)
 
 You can use your variables in templates, they'll be added to there, e.g:
-`ff gc my-temp ./src/componentsTest --name=hello --skipTest`
+`ff gc my-temp ./src/Test --myVar=hello --skipTest`
 
 See [here](https://github.com/footzi/file-fairy/tree/main/src/custom-template-examples) for an example
 

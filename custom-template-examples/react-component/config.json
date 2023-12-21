@@ -3,12 +3,12 @@
   "files": [
     {
       "template": "component.hbs",
-      "fileName": "index.tsx",
+      "fileName": "index.jsx",
       "usePathName": true
     },
     {
       "template": "styles.hbs",
-      "fileName": "index.scss",
+      "fileName": "styles.scss",
       "noGenerateKey": "nost"
     }
   ]

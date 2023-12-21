@@ -7,10 +7,8 @@ class Config {
   static DEFAULT_CONFIG_PATH = '../default.config.json';
   static CUSTOM_CONFIG_FILE_NAME = '../../../../ff.config.json';
 
-  constructor() {
-    this.config = {};
-    this.configPath = path.resolve(__dirname, Config.DEFAULT_CONFIG_PATH);
-  }
+  config = {};
+  configPath = path.resolve(__dirname, Config.DEFAULT_CONFIG_PATH);
 
   init() {
     try {

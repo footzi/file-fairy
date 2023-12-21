@@ -1,0 +1,7 @@
+import React, { FC } from 'react';
+
+interface TestProps {}
+
+export const Test: FC<TestProps> = (props) => {
+  return <h1>Test</h1>;
+};

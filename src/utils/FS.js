@@ -15,11 +15,11 @@ class FS {
   }
 
   static createFile(path, content) {
-    fs.writeFile(path, content, (err) => {
-      if (err) {
-        throw new Error(`Error creating file: "${path}", ${err.message}`);
-      }
-    });
+    try {
+      fs.writeFileSync(path, content);
+    } catch (err) {
+      throw new Error(`Error creating file: "${path}", ${err.message}`);
+    }
   }
 
   static readFileSync(path) {

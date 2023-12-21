@@ -1,18 +1,18 @@
 import React from 'react';
 import './styles.scss';
 
-const {{ uppercaseFirstLetter name }} = (props) => {
+const Test = (props) => {
   return (
     <>
-      <h1>{{name}}</h1>
+      <h1>Test</h1>
       <h2>You can use your variables in templates</h2>
       <p>
         Write:
         <code>`ff gc my-temp ./src/Test --myVariable=name --isGood`</code>
       </p>
-      <p>And then use in template {{vars.myVariable}} and as boolean {{vars.isGood}}</p>
+      <p>And then use in template FileFairy and as boolean true</p>
     </>
   );
 };
 
-export default {{ uppercaseFirstLetter name }};
+export default Test;

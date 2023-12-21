@@ -60,7 +60,7 @@ class Template {
         const pathToTemplate = path.resolve(`${template.folder}/${file.template}`);
         const templateSource = FS.readFileSync(pathToTemplate, 'utf8');
 
-        const content = Handlebars.compile(templateSource)({ name, ...variables, options });
+        const content = Handlebars.compile(templateSource)({ name, vars: variables, options });
 
         Template.writeTemplate(cliPath, file, content);
       });
@@ -112,13 +112,14 @@ class Template {
 
   static getCustomTemplatesFolder() {
     const isDev = process.env.FF_NODE_ENV === 'dev';
+    const isTest = process.env.FF_NODE_ENV === 'test';
     const conf = config.get();
 
     const prodPath = conf[OPTIONS.CUSTOM_TEMPLATES_FOLDER]
       ? path.resolve(conf[OPTIONS.CUSTOM_TEMPLATES_FOLDER])
       : path.resolve(__dirname, Template.DEFAULT_CUSTOM_TEMPLATES_FOLDER);
 
-    return isDev ? path.resolve(__dirname, Template.DEV_CUSTOM_TEMPLATES_FOLDER) : prodPath;
+    return isDev || isTest ? path.resolve(__dirname, Template.DEV_CUSTOM_TEMPLATES_FOLDER) : prodPath;
   }
 
   static getNameByAlias(alias) {

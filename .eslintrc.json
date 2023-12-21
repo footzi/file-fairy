@@ -1,16 +1,17 @@
 {
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "es2021": true
-    },
-    "extends": ["standard", "prettier"],
-    "parserOptions": {
-        "ecmaVersion": "latest"
-    },
-    "plugins": ["prettier"],
-    "rules": {
-        "prettier/prettier": "error",
-        "no-console": "error"
-    }
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true,
+    "jest/globals": true
+  },
+  "extends": ["standard", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "plugins": ["prettier", "jest"],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-console": "error"
+  }
 }

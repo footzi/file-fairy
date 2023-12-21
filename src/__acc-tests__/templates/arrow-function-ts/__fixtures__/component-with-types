@@ -1,0 +1,7 @@
+interface CalcProps {}
+
+interface CalcResult {}
+
+export const calc = (props: CalcProps): CalcResult => {
+  return 'hello';
+};

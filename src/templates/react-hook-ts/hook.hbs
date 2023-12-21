@@ -1,13 +1,21 @@
 {{#if options.useTypesInComponent}}
 {{else}}
 import { {{uppercaseFirstLetter name}}Props, {{uppercaseFirstLetter name}}Result } from './types';
+
 {{/if}}
 {{#if options.useTypesInComponent}}
+  {{#if options.useTypeAsKeyWord}}
+type {{uppercaseFirstLetter name}}Props = {}
+
+type {{uppercaseFirstLetter name}}Result = {}
+
+  {{else}}
 interface {{uppercaseFirstLetter name}}Props {}
 
 interface {{uppercaseFirstLetter name}}Result {}
-{{/if}}
 
+  {{/if}}
+{{/if}}
 export const {{name}} = (props: {{uppercaseFirstLetter name}}Props): {{uppercaseFirstLetter name}}Result => {
   return 'hello';
 };
