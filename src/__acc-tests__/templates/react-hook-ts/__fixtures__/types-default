@@ -1,3 +1,3 @@
-export interface UseGetDataProps {}
+export interface UseSomeHookProps {}
 
-export interface UseGetDataResult {}
+export interface UseSomeHookResult {}

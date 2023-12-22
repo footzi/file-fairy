@@ -1,7 +1,7 @@
-interface CalcProps {}
+interface SomeFunctionProps {}
 
-interface CalcResult {}
+interface SomeFunctionResult {}
 
-export const calc = (props: CalcProps): CalcResult => {
+export const someFunction = (props: SomeFunctionProps): SomeFunctionResult => {
   return 'hello';
 };

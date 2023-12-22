@@ -1,10 +1,13 @@
 const handlebars = require('handlebars');
+const Helpers = require('./Helpers');
 
 const init = () => {
-  handlebars.registerHelper('uppercaseFirstLetter', (str) => {
-    const result = str.charAt(0).toUpperCase() + str.slice(1);
+  handlebars.registerHelper('toCamelCase', (str) => {
+    return Helpers.toCamelCase(str);
+  });
 
-    return new handlebars.SafeString(result);
+  handlebars.registerHelper('uppercaseFirstLetter', (str) => {
+    return Helpers.uppercaseFirstLetter(str);
   });
 };
 

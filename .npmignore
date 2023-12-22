@@ -3,3 +3,5 @@
 !package.json
 !README.md
 !CHANGELOG.md
+src/__acc-tests__/
+**/__spec__/

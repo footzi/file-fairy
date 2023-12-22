@@ -1,9 +1,9 @@
 import { renderHook, act } from '@testing-library/react-hooks';
-import { {{name}} } from '../index';
+import { {{toCamelCase name}} } from '../index';
 
-describe('{{name}}', () => {
+describe('{{toCamelCase name}}', () => {
   it('should return correct result', () => {
-    const { result } = renderHook(() => {{name}}());
+    const { result } = renderHook(() => {{toCamelCase name}}());
 
     act(() => {
       result.current.increment();

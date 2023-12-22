@@ -1,1 +1,1 @@
-export interface TestProps {}
+export interface SomeComponentProps {}

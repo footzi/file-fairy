@@ -1,1 +1,1 @@
-export type TestProps = {}
+export type SomeComponentProps = {}

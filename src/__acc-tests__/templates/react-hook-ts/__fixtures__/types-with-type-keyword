@@ -1,3 +1,3 @@
-export type UseGetDataProps {}
+export type UseSomeHookProps {}
 
-export type UseGetDataResult {}
+export type UseSomeHookResult {}

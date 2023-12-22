@@ -1,5 +1,5 @@
 {{#if options.useTypeAsKeyWord}}
-export type {{uppercaseFirstLetter name}}Props = {}
+export type {{uppercaseFirstLetter (toCamelCase name)}}Props = {}
 {{else}}
-export interface {{uppercaseFirstLetter name}}Props {}
+export interface {{uppercaseFirstLetter (toCamelCase name)}}Props {}
 {{/if}}

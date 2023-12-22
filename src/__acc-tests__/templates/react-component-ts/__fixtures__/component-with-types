@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
-interface TestProps {}
+interface SomeComponentProps {}
 
-export const Test: FC<TestProps> = (props) => {
-  return <h1>Test</h1>;
+export const SomeComponent: FC<SomeComponentProps> = (props) => {
+  return <h1>Hello</h1>;
 };

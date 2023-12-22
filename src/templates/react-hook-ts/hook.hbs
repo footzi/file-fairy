@@ -1,21 +1,21 @@
 {{#if options.useTypesInComponent}}
 {{else}}
-import { {{uppercaseFirstLetter name}}Props, {{uppercaseFirstLetter name}}Result } from './types';
+import { {{uppercaseFirstLetter (toCamelCase name)}}Props, {{uppercaseFirstLetter (toCamelCase name)}}Result } from './types';
 
 {{/if}}
 {{#if options.useTypesInComponent}}
   {{#if options.useTypeAsKeyWord}}
-type {{uppercaseFirstLetter name}}Props = {}
+type {{uppercaseFirstLetter (toCamelCase name)}}Props = {}
 
-type {{uppercaseFirstLetter name}}Result = {}
+type {{uppercaseFirstLetter (toCamelCase name)}}Result = {}
 
   {{else}}
-interface {{uppercaseFirstLetter name}}Props {}
+interface {{uppercaseFirstLetter (toCamelCase name)}}Props {}
 
-interface {{uppercaseFirstLetter name}}Result {}
+interface {{uppercaseFirstLetter (toCamelCase name)}}Result {}
 
   {{/if}}
 {{/if}}
-export const {{name}} = (props: {{uppercaseFirstLetter name}}Props): {{uppercaseFirstLetter name}}Result => {
+export const {{toCamelCase name}} = (props: {{uppercaseFirstLetter (toCamelCase name)}}Props): {{uppercaseFirstLetter (toCamelCase name)}}Result => {
   return 'hello';
 };

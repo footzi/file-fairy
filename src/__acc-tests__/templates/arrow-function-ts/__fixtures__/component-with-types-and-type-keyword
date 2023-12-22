@@ -1,7 +1,7 @@
-type CalcProps = {}
+type SomeFunctionProps = {}
 
-type CalcResult = {}
+type SomeFunctionResult = {}
 
-export const calc = (props: CalcProps): CalcResult => {
+export const someFunction = (props: SomeFunctionProps): SomeFunctionResult => {
   return 'hello';
 };

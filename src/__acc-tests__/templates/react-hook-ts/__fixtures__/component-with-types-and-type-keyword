@@ -1,7 +1,7 @@
-type UseGetDataProps = {}
+type UseSomeHookProps = {}
 
-type UseGetDataResult = {}
+type UseSomeHookResult = {}
 
-export const useGetData = (props: UseGetDataProps): UseGetDataResult => {
+export const useSomeHook = (props: UseSomeHookProps): UseSomeHookResult => {
   return 'hello';
 };

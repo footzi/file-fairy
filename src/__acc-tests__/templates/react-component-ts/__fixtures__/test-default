@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react';
-import { Test } from '../index';
+import { SomeComponent } from '../index';
 
-describe('Test', () => {
+describe('SomeComponent', () => {
   it('should render', () => {
-    render(Test);
+    render(SomeComponent);
   });
 });

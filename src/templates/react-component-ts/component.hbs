@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 {{#if options.useTypesInComponent}}
 {{else}}
-import { {{ name }}Props } from './types';
+import { {{ uppercaseFirstLetter (toCamelCase name) }}Props } from './types';
 {{/if}}
 {{#if options.noStyle}}
 {{else}}
@@ -10,18 +10,18 @@ import styles from './index.css';
 
 {{#if options.useTypesInComponent}}
   {{#if options.useTypeAsKeyWord}}
-type {{uppercaseFirstLetter name}}Props = {}
+type {{uppercaseFirstLetter (toCamelCase name)}}Props = {}
   {{else}}
-interface {{uppercaseFirstLetter name}}Props {}
+interface {{uppercaseFirstLetter (toCamelCase name)}}Props {}
   {{/if}}
 
 {{/if}}
 {{#if options.noStyle}}
-export const {{ uppercaseFirstLetter name }}: FC<{{name}}Props> = (props) => {
-  return <h1>{{name}}</h1>;
+export const {{ uppercaseFirstLetter (toCamelCase name) }}: FC<{{uppercaseFirstLetter (toCamelCase name)}}Props> = (props) => {
+  return <h1>Hello</h1>;
 };
 {{else}}
-export const {{ uppercaseFirstLetter name }}: FC<{{name}}Props> = (props) => {
-  return <h1 className={styles.root}>{{name}}</h1>;
+export const {{ uppercaseFirstLetter (toCamelCase name) }}: FC<{{uppercaseFirstLetter (toCamelCase name)}}Props> = (props) => {
+  return <h1 className={styles.root}>Hello</h1>;
 };
 {{/if}}

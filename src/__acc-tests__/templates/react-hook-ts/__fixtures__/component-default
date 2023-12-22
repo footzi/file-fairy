@@ -1,5 +1,5 @@
-import { UseGetDataProps, UseGetDataResult } from './types';
+import { UseSomeHookProps, UseSomeHookResult } from './types';
 
-export const useGetData = (props: UseGetDataProps): UseGetDataResult => {
+export const useSomeHook = (props: UseSomeHookProps): UseSomeHookResult => {
   return 'hello';
 };

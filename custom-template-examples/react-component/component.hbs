@@ -1,10 +1,10 @@
 import React from 'react';
 import './styles.scss';
 
-const {{ uppercaseFirstLetter name }} = (props) => {
+const {{ uppercaseFirstLetter (toCamelCase name) }} = (props) => {
   return (
     <>
-      <h1>{{name}}</h1>
+      <h1>Hello</h1>
       <h2>You can use your variables in templates</h2>
       <p>
         Write:
@@ -15,4 +15,4 @@ const {{ uppercaseFirstLetter name }} = (props) => {
   );
 };
 
-export default {{ uppercaseFirstLetter name }};
+export default {{ uppercaseFirstLetter (toCamelCase name) }};

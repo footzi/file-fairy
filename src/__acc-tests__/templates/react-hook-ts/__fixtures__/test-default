@@ -1,9 +1,9 @@
 import { renderHook, act } from '@testing-library/react-hooks';
-import { useGetData } from '../index';
+import { useSomeHook } from '../index';
 
-describe('useGetData', () => {
+describe('useSomeHook', () => {
   it('should return correct result', () => {
-    const { result } = renderHook(() => useGetData());
+    const { result } = renderHook(() => useSomeHook());
 
     act(() => {
       result.current.increment();
