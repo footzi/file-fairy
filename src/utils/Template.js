@@ -9,7 +9,7 @@ const { TEMPLATES_ALIAS } = require('../templates/constants');
 
 class Template {
   static CONFIG_FILE_NAME = 'config.json';
-  static DEFAULT_CUSTOM_TEMPLATES_FOLDER = '../../../../.ff-templates'; // from node-modules
+  static DEFAULT_CUSTOM_TEMPLATES_FOLDER = '.ff-templates';
   static DEV_CUSTOM_TEMPLATES_FOLDER = '../../custom-template-examples'; // from dev
 
   static getCustomTemplates() {
@@ -114,10 +114,11 @@ class Template {
     const isDev = process.env.FF_NODE_ENV === 'dev';
     const isTest = process.env.FF_NODE_ENV === 'test';
     const conf = config.get();
+    const rootFolder = config.getRootFolder();
 
     const prodPath = conf[OPTIONS.CUSTOM_TEMPLATES_FOLDER]
-      ? path.resolve(__dirname, `../../../../${conf[OPTIONS.CUSTOM_TEMPLATES_FOLDER]}`)
-      : path.resolve(__dirname, Template.DEFAULT_CUSTOM_TEMPLATES_FOLDER);
+      ? path.resolve(rootFolder, conf[OPTIONS.CUSTOM_TEMPLATES_FOLDER])
+      : path.resolve(rootFolder, Template.DEFAULT_CUSTOM_TEMPLATES_FOLDER);
 
     return isDev || isTest ? path.resolve(__dirname, Template.DEV_CUSTOM_TEMPLATES_FOLDER) : prodPath;
   }
