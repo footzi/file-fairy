@@ -116,7 +116,7 @@ class Template {
     const conf = config.get();
 
     const prodPath = conf[OPTIONS.CUSTOM_TEMPLATES_FOLDER]
-      ? path.resolve(conf[OPTIONS.CUSTOM_TEMPLATES_FOLDER])
+      ? path.resolve(__dirname, `../../../../${conf[OPTIONS.CUSTOM_TEMPLATES_FOLDER]}`)
       : path.resolve(__dirname, Template.DEFAULT_CUSTOM_TEMPLATES_FOLDER);
 
     return isDev || isTest ? path.resolve(__dirname, Template.DEV_CUSTOM_TEMPLATES_FOLDER) : prodPath;
