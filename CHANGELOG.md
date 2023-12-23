@@ -1,5 +1,19 @@
 # Changelog
 
+### 1.0.0
+- updated docs
+- added find root folder if package installed globally
+- added camelCase helper
+- added ability to rewrite alias for custom templates
+- added config default templates
+- added option to not generate file
+- added variables for custom templates
+- added short command for version
+- added new templates
+- added handlebars utils
+- added documentation
+- added and fixed templates
+ 
 ### 0.0.4
 - added showing version
 - fixed default path to custom templates folder

@@ -1,6 +1,6 @@
 {
   "name": "file-fairy",
-  "version": "0.0.4",
+  "version": "1.0.0-0",
   "author": "Vladislav Manakov",
   "description": "Magical file generator",
   "repository": {
@@ -17,7 +17,7 @@
     "lint": "eslint --ext .js src/",
     "test": "FF_NODE_ENV=test jest"
   },
-  "keywords": [],
+  "keywords": ["cli", "file generator"],
   "license": "MIT",
   "dependencies": {
     "handlebars": "^4.7.8"
