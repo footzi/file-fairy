@@ -22,6 +22,22 @@
       "useTypesInComponent": false,
       "rewriteFiles": [],
       "rewriteAlias": ""
+    },
+    "react-component": {
+      "noTest": false,
+      "noStyle": false,
+      "rewriteFiles": [],
+      "rewriteAlias": ""
+    },
+    "arrow-function": {
+      "noTest": false,
+      "rewriteFiles": [],
+      "rewriteAlias": ""
+    },
+    "react-hook": {
+      "noTest": false,
+      "rewriteFiles": [],
+      "rewriteAlias": ""
     }
   }
 }

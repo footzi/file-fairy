@@ -1,0 +1,15 @@
+import React from 'react';
+{{#if options.noStyle}}
+{{else}}
+import styles from './index.css';
+{{/if}}
+
+{{#if options.noStyle}}
+export const {{ uppercaseFirstLetter (toCamelCase name) }} = (props) => {
+  return <h1>Hello</h1>;
+};
+{{else}}
+export const {{ uppercaseFirstLetter (toCamelCase name) }} = (props) => {
+  return <h1 className={styles.root}>Hello</h1>;
+};
+{{/if}}

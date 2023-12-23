@@ -1,0 +1,10 @@
+import { someFunction } from '../index';
+
+describe('someFunction', () => {
+  it('should return correct result', () => {
+    const props = {};
+    const result = {};
+
+    expect(someFunction(props)).toEqual(result);
+  });
+});

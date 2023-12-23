@@ -1,0 +1,8 @@
+import { render } from '@testing-library/react';
+import { SomeComponent } from '../index';
+
+describe('SomeComponent', () => {
+  it('should render', () => {
+    render(SomeComponent);
+  });
+});

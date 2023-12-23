@@ -1,0 +1,18 @@
+{
+  "alias": "rc",
+  "files": [
+    {
+      "template": "component.hbs",
+      "fileName": "index.jsx"
+    },
+    {
+      "template": "test.hbs",
+      "folderPath": "__spec__",
+      "fileName": "index.spec.jsx"
+    },
+    {
+      "template": "styles.hbs",
+      "fileName": "index.css"
+    }
+  ]
+}

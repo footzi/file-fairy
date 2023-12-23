@@ -1,0 +1,14 @@
+{
+  "alias": "rh",
+  "files": [
+    {
+      "template": "hook.hbs",
+      "fileName": "index.js"
+    },
+    {
+      "template": "test.hbs",
+      "folderPath": "__spec__",
+      "fileName": "index.spec.js"
+    }
+  ]
+}
