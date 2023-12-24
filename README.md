@@ -37,12 +37,11 @@ Read more about options for templates in their pages:
 - [Arrow function](https://github.com/footzi/file-fairy/blob/main/docs/templates/arrow-function.md) `ff g af ./src/components/someFunction`
 
 ## Creating custom templates
-You can create your templates in `.ff-templates` folder in your project
 
-#### You should take the following steps:
-1. Create new folder (a folder name is doesn't matter)
-2. Add templates using [handlebars](https://handlebarsjs.com/)
-3. Add `config.json` file with [contract](https://github.com/footzi/file-fairy/blob/main/docs/config-json.md)
+1. Create `.ff-templates` folder in your project (or with your name, [see config file options](#config-file-options))
+2. Create a new folder for template (a folder name doesn't matter)
+3. Add templates using [handlebars](https://handlebarsjs.com/)
+4. Add `config.json` file with [contract](https://github.com/footzi/file-fairy/blob/main/docs/config-json.md)
 
 #### We can use the next helpers in template:
 1. `uppercaseFirstLetter` - capitalizes the first letter
@@ -63,7 +62,7 @@ See [full custom template example](https://github.com/footzi/file-fairy/tree/mai
 ## Config file options
 You can create `ff.config.json` with following options:
 - `custom-templates-folder` - set another folder with your custom templates (instead of `.ff-templates`)
-- `templates` (and then `default-component-name`) - set options for default templates, they'll apply to every generate. Read about options on [templates-page](https://github.com/footzi/file-fairy/blob/main/docs/DEFAULT-TEMPLATES.md)
+- `templates` (and then `component-name`) - set options for default templates, they'll apply to every generate. Read about options on [templates-page](https://github.com/footzi/file-fairy/blob/main/docs/DEFAULT-TEMPLATES.md)
 
 ```json
   {

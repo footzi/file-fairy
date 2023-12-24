@@ -69,7 +69,7 @@ export interface UseSomeHookProps {}
 export interface UseSomeHookResult {}
 ```
 
-`types.ts` with useTypeAsKeyWord option::
+`types.ts` with **useTypeAsKeyWord** option::
 ```typescript
 export type UseSomeHookProps = {};
 

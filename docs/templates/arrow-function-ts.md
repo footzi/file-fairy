@@ -69,7 +69,7 @@ export interface SomeFunctionProps {}
 export interface SomeFunctionResult {}
 ```
 
-`types.ts` with useTypeAsKeyWord option::
+`types.ts` with **useTypeAsKeyWord** option::
 ```typescript
 export type SomeFunctionProps = {};
 

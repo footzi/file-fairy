@@ -81,7 +81,7 @@ export const SomeComponent: FC<SomeComponentProps> = (props) => {
 export interface TestProps {}
 ```
 
-`types.ts` with useTypeAsKeyWord option::
+`types.ts` with **useTypeAsKeyWord** option::
 ```typescript
 export type SomeComponentProps = {}
 ```
