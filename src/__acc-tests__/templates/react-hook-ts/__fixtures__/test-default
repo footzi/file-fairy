@@ -3,7 +3,8 @@ import { useSomeHook } from '../index';
 
 describe('useSomeHook', () => {
   it('should return correct result', () => {
-    const { result } = renderHook(() => useSomeHook());
+    const props = {};
+    const { result } = renderHook(() => useSomeHook(props));
 
     act(() => {
       result.current.increment();

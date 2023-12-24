@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-type SomeComponentProps = {}
+type SomeComponentProps = {};
 
 export const SomeComponent: FC<SomeComponentProps> = (props) => {
   return <h1>Hello</h1>;

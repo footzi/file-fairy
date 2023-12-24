@@ -5,9 +5,9 @@ import { {{uppercaseFirstLetter (toCamelCase name)}}Props, {{uppercaseFirstLette
 {{/if}}
 {{#if options.useTypesInComponent}}
   {{#if options.useTypeAsKeyWord}}
-type {{uppercaseFirstLetter (toCamelCase name)}}Props = {}
+type {{uppercaseFirstLetter (toCamelCase name)}}Props = {};
 
-type {{uppercaseFirstLetter (toCamelCase name)}}Result = {}
+type {{uppercaseFirstLetter (toCamelCase name)}}Result = {};
 
   {{else}}
 interface {{uppercaseFirstLetter (toCamelCase name)}}Props {}

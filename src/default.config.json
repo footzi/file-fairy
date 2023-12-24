@@ -13,6 +13,7 @@
       "noTest": false,
       "noTypes": false,
       "useTypesInComponent": false,
+      "useTypeAsKeyWord": false,
       "rewriteFiles": [],
       "rewriteAlias": ""
     },
@@ -20,6 +21,7 @@
       "noTest": false,
       "noTypes": false,
       "useTypesInComponent": false,
+      "useTypeAsKeyWord": false,
       "rewriteFiles": [],
       "rewriteAlias": ""
     },

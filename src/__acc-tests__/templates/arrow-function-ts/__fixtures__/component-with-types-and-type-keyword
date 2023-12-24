@@ -1,6 +1,6 @@
-type SomeFunctionProps = {}
+type SomeFunctionProps = {};
 
-type SomeFunctionResult = {}
+type SomeFunctionResult = {};
 
 export const someFunction = (props: SomeFunctionProps): SomeFunctionResult => {
   return 'hello';

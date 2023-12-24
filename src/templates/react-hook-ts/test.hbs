@@ -3,7 +3,8 @@ import { {{toCamelCase name}} } from '../index';
 
 describe('{{toCamelCase name}}', () => {
   it('should return correct result', () => {
-    const { result } = renderHook(() => {{toCamelCase name}}());
+    const props = {};
+    const { result } = renderHook(() => {{toCamelCase name}}(props));
 
     act(() => {
       result.current.increment();

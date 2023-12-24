@@ -10,7 +10,7 @@ import styles from './index.css';
 
 {{#if options.useTypesInComponent}}
   {{#if options.useTypeAsKeyWord}}
-type {{uppercaseFirstLetter (toCamelCase name)}}Props = {}
+type {{uppercaseFirstLetter (toCamelCase name)}}Props = {};
   {{else}}
 interface {{uppercaseFirstLetter (toCamelCase name)}}Props {}
   {{/if}}

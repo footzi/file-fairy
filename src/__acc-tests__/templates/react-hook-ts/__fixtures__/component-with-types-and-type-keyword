@@ -1,6 +1,6 @@
-type UseSomeHookProps = {}
+type UseSomeHookProps = {};
 
-type UseSomeHookResult = {}
+type UseSomeHookResult = {};
 
 export const useSomeHook = (props: UseSomeHookProps): UseSomeHookResult => {
   return 'hello';
