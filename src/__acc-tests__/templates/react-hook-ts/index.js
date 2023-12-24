@@ -71,7 +71,7 @@ const TESTS = [
     ],
   },
   {
-    name: 'should write template with useTypeAsKeyWord option',
+    name: 'should write template with useTypesInComponent option',
     cli: ['', '', 'g', 'rht', './components/useSomeHook'],
     folderName: 'components/useSomeHook',
     configFile: {
@@ -87,6 +87,29 @@ const TESTS = [
       {
         fileName: 'components/useSomeHook/index.ts',
         content: readExpectedTemplate(__dirname, './__fixtures__/component-with-types-and-type-keyword'),
+      },
+    ],
+  },
+  {
+    name: 'should write template with useTypeAsKeyWord option',
+    cli: ['', '', 'g', 'rht', './components/useSomeHook'],
+    folderName: 'components/useSomeHook',
+    configFile: {
+      templates: {
+        'react-hook-ts': {
+          useTypeAsKeyWord: true,
+          noTest: true,
+        },
+      },
+    },
+    files: [
+      {
+        fileName: 'components/useSomeHook/index.ts',
+        content: readExpectedTemplate(__dirname, './__fixtures__/component-default'),
+      },
+      {
+        fileName: 'components/useSomeHook/types.ts',
+        content: readExpectedTemplate(__dirname, './__fixtures__/types-with-type-keyword'),
       },
     ],
   },

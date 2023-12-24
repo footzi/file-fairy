@@ -1,3 +1,3 @@
-export type UseSomeHookProps {}
+export type UseSomeHookProps = {};
 
-export type UseSomeHookResult {}
+export type UseSomeHookResult = {};

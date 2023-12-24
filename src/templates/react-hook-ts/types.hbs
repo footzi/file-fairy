@@ -1,3 +1,9 @@
+{{#if options.useTypeAsKeyWord}}
+export type {{uppercaseFirstLetter (toCamelCase name)}}Props = {};
+
+export type {{uppercaseFirstLetter (toCamelCase name)}}Result = {};
+{{else}}
 export interface {{uppercaseFirstLetter (toCamelCase name)}}Props {}
 
 export interface {{uppercaseFirstLetter (toCamelCase name)}}Result {}
+{{/if}}

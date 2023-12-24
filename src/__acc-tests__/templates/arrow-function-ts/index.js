@@ -72,6 +72,29 @@ const TESTS = [
     ],
   },
   {
+    name: 'should write template with useTypeAsKeyWord option',
+    cli: ['', '', 'g', 'aft', './components/some-function'],
+    folderName: 'components/some-function',
+    configFile: {
+      templates: {
+        'arrow-function-ts': {
+          useTypeAsKeyWord: true,
+          noTest: true,
+        },
+      },
+    },
+    files: [
+      {
+        fileName: 'components/some-function/index.ts',
+        content: readExpectedTemplate(__dirname, './__fixtures__/component-default'),
+      },
+      {
+        fileName: 'components/some-function/types.ts',
+        content: readExpectedTemplate(__dirname, './__fixtures__/types-with-type-keyword'),
+      },
+    ],
+  },
+  {
     name: 'should write template with rewriteAlias option',
     cli: ['', '', 'g', 'myAlias', './components/some-function'],
     folderName: 'components/some-function',

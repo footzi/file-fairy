@@ -6,11 +6,12 @@
       "useTypeAsKeyWord": false,
       "noStyle": false,
       "noTest": false,
+      "noTypes": false,
       "rewriteFiles": [],
       "rewriteAlias": ""
     },
     "react-hook-ts": {
-      "noTest": false,
+      "noTest": true,
       "noTypes": false,
       "useTypesInComponent": false,
       "useTypeAsKeyWord": false,
