@@ -22,7 +22,7 @@ You have several options:
 Use `ff g {alias} {path} --{options}` for generate default template, where
 - `alias` - a name of template
 - `path` - path to the creating file
-- `options` - for this template
+- `options` - options for this template
 
 E.g:
 `ff g rct ./src/components/SomeComponent --nost` - Will create react typescript component without style file
@@ -42,12 +42,20 @@ Read more about options for templates on their pages:
 2. Create a new folder for template (a folder name doesn't matter)
 3. Add templates using [handlebars](https://handlebarsjs.com/)
 4. Add `config.json` file with [contract](https://github.com/footzi/file-fairy/blob/main/docs/config-json.md)
+5. Use `ff gc {alias} {path} --{options}` for generate your template, where
+   - `alias` - your shortcut from [config-json](https://github.com/footzi/file-fairy/blob/main/docs/config-json.md)
+   - `path` - path to the creating file
+   - `options` - options for this template
+     
+E.g:
+`ff gc my-temp ./src/Test --myVar=hello --skipTest` - Will create your template with options
+
 
 #### We can use the next helpers in template:
 1. `uppercaseFirstLetter` - capitalizes the first letter
 2. `toCamelCase` - transform text to camel case
 3. `name` - this name of your file from cli command. E.g. `ff gc my-temp ./src/MyCustomComponent` **name** will be equal `MyCustomComponent`
-4. `vars` - this object with your variables from cli command. E.g `ff gc my-temp ./src/Test --myVar=hello --skipTest` **vars** will be equal 
+4. `vars` - this object with your options from cli command. E.g `ff gc my-temp ./src/Test --myVar=hello --skipTest` **vars** will be equal 
     ```json
     {
       "myVar": "hello",
