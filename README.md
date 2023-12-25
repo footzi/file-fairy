@@ -1,22 +1,22 @@
 # 😽🪄 File Fairy
 
-**If you're tired of constantly creating the same files and folders, this package will save you time!**
+**If you're tired of constantly creating the same files and folders, or you are creating too much boilerplate code, this package will save you time!**
 
-**Use default templates with options or create your own**
+**You can use default templates with options or create your own.**
 
 
 ## Install
 You have several options:
 1. Install in your project
-   - Run `npm install file-fairy -D`
-   - Add `ff.config.json` in the root folder, if you want to customize the package
+   - run `npm install file-fairy -D`
+   - add `ff.config.json` in the root folder of your project, if you want to customize the package
 2. Global install
-   - Run `npm install file-fairy -g`
-   - Add `ff.config.json` in the root folder, if you want to customize the package
+   - run `npm install file-fairy -g`
+   - add `ff.config.json` in the root folder of your project, if you want to customize the package
 3. Installation in a project with a non-frontend stack
-   - Be sure that you are using [node.js](https://nodejs.org/en/download) higher than 16 version
-   - Run `npm install file-fairy -g`
-   - Be sure to add `ff.config.json` in the root folder
+   - be sure that you are using [node.js](https://nodejs.org/en/download) higher than 16 version
+   - run `npm install file-fairy -g`
+   - be sure to add `ff.config.json` in the root folder of your project
 
 ## Using default templates
 Use `ff g {alias} {path} --{options}` for generate default template, where
@@ -27,7 +27,7 @@ Use `ff g {alias} {path} --{options}` for generate default template, where
 E.g:
 `ff g rct ./src/components/SomeComponent --nost` - Will create react typescript component without style file
 
-Read more about options for templates in their pages:
+Read more about options for templates on their pages:
 
 - [React Typescript component](https://github.com/footzi/file-fairy/blob/main/docs/templates/react-component-ts.md) `ff g rct ./src/components/SomeComponent`
 - [React Typescript hook](https://github.com/footzi/file-fairy/blob/main/docs/templates/react-hook-ts.md) `ff g rht ./src/components/useSomeHook`
@@ -62,7 +62,7 @@ See [full custom template example](https://github.com/footzi/file-fairy/tree/mai
 ## Config file options
 You can create `ff.config.json` with following options:
 - `custom-templates-folder` - set another folder with your custom templates (instead of `.ff-templates`)
-- `templates` (and then `component-name`) - set options for default templates, they'll apply to every generate. Read about options on [templates-page](https://github.com/footzi/file-fairy/blob/main/docs/DEFAULT-TEMPLATES.md)
+- `templates` (and then `component-name`) - set options for default templates, they'll apply to every generate. Read more on [the doc page for each template](https://github.com/footzi/file-fairy/blob/main/docs/templates)
 
 ```json
   {
