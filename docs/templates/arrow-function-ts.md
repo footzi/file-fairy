@@ -83,9 +83,11 @@ import { someFunction } from '../index';
 describe('someFunction', () => {
   it('should return correct result', () => {
     const props = {};
-    const result = {};
+    const expectedResult = {};
 
-    expect(someFunction(props)).toEqual(result);
+    const result = someFunction(props);
+
+    expect(result).toEqual(expectedResult);
   });
 });
 ```

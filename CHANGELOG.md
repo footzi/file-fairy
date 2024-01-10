@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.0.1
+- updated docs and default templates
+
 ### 1.0.0
 - updated docs
 - added find root folder if package installed globally

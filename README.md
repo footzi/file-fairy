@@ -19,12 +19,12 @@ You have several options:
    - be sure to add `ff.config.json` in the root folder of your project
 
 ## Using default templates
-Use `ff g {alias} {path} --{options}` for generate default template, where
+Use this command in the terminal: `ff g {alias} {path} --{options}` for generate default template, where
 - `alias` - a name of template
 - `path` - path to the creating file
 - `options` - options for this template
 
-E.g:
+E.g.:
 `ff g rct ./src/components/SomeComponent --nost` - Will create react typescript component without style file
 
 Read more about options for templates on their pages:
@@ -47,7 +47,7 @@ Read more about options for templates on their pages:
    - `path` - path to the creating file
    - `options` - options for this template
      
-E.g:
+E.g.:
 `ff gc my-temp ./src/Test --myVar=hello --skipTest` - Will create your template with options
 
 
@@ -55,7 +55,7 @@ E.g:
 1. `uppercaseFirstLetter` - capitalizes the first letter
 2. `toCamelCase` - transform text to camel case
 3. `name` - this name of your file from cli command. E.g. `ff gc my-temp ./src/MyCustomComponent` **name** will be equal `MyCustomComponent`
-4. `vars` - this object with your options from cli command. E.g `ff gc my-temp ./src/Test --myVar=hello --skipTest` **vars** will be equal 
+4. `vars` - this object with your options from cli command. E.g. `ff gc my-temp ./src/Test --myVar=hello --skipTest` **vars** will be equal 
     ```json
     {
       "myVar": "hello",

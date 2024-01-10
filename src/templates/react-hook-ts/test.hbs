@@ -4,12 +4,14 @@ import { {{toCamelCase name}} } from '../index';
 describe('{{toCamelCase name}}', () => {
   it('should return correct result', () => {
     const props = {};
+    const expectedResult = {};
+
     const { result } = renderHook(() => {{toCamelCase name}}(props));
 
     act(() => {
       result.current.increment();
     });
 
-    expect(result.current.count).toBe(1);
+    expect(result.current.count).toBe(expectedResult);
   });
 });

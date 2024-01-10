@@ -4,12 +4,14 @@ import { useSomeHook } from '../index';
 describe('useSomeHook', () => {
   it('should return correct result', () => {
     const props = {};
+    const expectedResult = {};
+
     const { result } = renderHook(() => useSomeHook(props));
 
     act(() => {
       result.current.increment();
     });
 
-    expect(result.current.count).toBe(1);
+    expect(result.current.count).toBe(expectedResult);
   });
 });
