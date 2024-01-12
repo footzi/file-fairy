@@ -69,7 +69,7 @@ class Config {
   }
 
   findRootFolder() {
-    const maxDepth = 5;
+    const maxDepth = 10;
 
     const find = (rootFileName) => {
       let currentDir = process.cwd();

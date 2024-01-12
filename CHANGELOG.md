@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.0.2
+- fixed max depth for find root folder
+
 ### 1.0.1
 - updated docs and default templates
 
