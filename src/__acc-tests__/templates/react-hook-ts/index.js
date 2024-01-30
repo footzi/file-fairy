@@ -134,7 +134,7 @@ const TESTS = [
     ],
   },
   {
-    name: 'should write template with rewrite files, usePathName, noGenerate options',
+    name: 'should write template with rewrite files, {{name}}, noGenerate options',
     cli: ['', '', 'g', 'rht', './components/useSomeHook'],
     folderName: 'components/useSomeHook',
     configFile: {
@@ -143,8 +143,7 @@ const TESTS = [
           rewriteFiles: [
             {
               template: 'hook.hbs',
-              fileName: 'index.ts',
-              usePathName: true,
+              fileName: '{{name}}.ts',
             },
             {
               template: 'test.hbs',

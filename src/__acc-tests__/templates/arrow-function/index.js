@@ -65,7 +65,7 @@ const TESTS = [
     ],
   },
   {
-    name: 'should write template with rewrite files, usePathName, noGenerate options',
+    name: 'should write template with rewrite files, {{name}}, noGenerate options',
     cli: ['', '', 'g', 'af', './components/some-function'],
     folderName: 'components/some-function',
     configFile: {
@@ -74,8 +74,7 @@ const TESTS = [
           rewriteFiles: [
             {
               template: 'fn.hbs',
-              fileName: 'index.js',
-              usePathName: true,
+              fileName: '{{name}}.js',
             },
             {
               template: 'test.hbs',

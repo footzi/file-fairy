@@ -4,9 +4,9 @@
 - `files` - array with file templates
     - `template` - template name
     - `fileName` - file name
+       - `{{name}}` - use can use this template to add file name
     - `folderPath` - if you want to create folder than add path to it
     - `noGenerateKey` - if you don't want to generate this file, add this key in as bool variable `ff gc aft ./src/utils/getData --nt`
-    - `usePathName` - if you want that file to have a name as a folder in your cli path
     - `noGenerate` - never generate this file
 
 ```json
@@ -15,13 +15,12 @@
   "files": [
     {
       "template": "fn.hbs",
-      "fileName": "index.ts",
-      "usePathName": true
+      "fileName": "index.ts"
     },
     {
       "template": "test.hbs",
       "folderPath": "__spec__",
-      "fileName": "index.spec.ts",
+      "fileName": "{{name}}.spec.ts",
       "noGenerate": true
     },
     {

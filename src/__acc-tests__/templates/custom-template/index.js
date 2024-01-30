@@ -7,12 +7,16 @@ const TESTS = [
     folderName: 'components/CustomComponent',
     files: [
       {
-        fileName: 'components/CustomComponent/CustomComponent.jsx',
+        fileName: 'components/CustomComponent/index.jsx',
         content: readExpectedTemplate(__dirname, './__fixtures__/component-default'),
       },
       {
         fileName: 'components/CustomComponent/styles.scss',
         content: readExpectedTemplate(__dirname, './__fixtures__/styles-default'),
+      },
+      {
+        fileName: 'components/CustomComponent/CustomComponent.spec.jsx',
+        content: readExpectedTemplate(__dirname, './__fixtures__/test'),
       },
     ],
   },
@@ -22,12 +26,16 @@ const TESTS = [
     folderName: 'components/custom-component',
     files: [
       {
-        fileName: 'components/custom-component/custom-component.jsx',
+        fileName: 'components/custom-component/index.jsx',
         content: readExpectedTemplate(__dirname, './__fixtures__/component-default'),
       },
       {
         fileName: 'components/custom-component/styles.scss',
         content: readExpectedTemplate(__dirname, './__fixtures__/styles-default'),
+      },
+      {
+        fileName: 'components/custom-component/custom-component.spec.jsx',
+        content: readExpectedTemplate(__dirname, './__fixtures__/test'),
       },
     ],
   },
@@ -37,12 +45,16 @@ const TESTS = [
     folderName: 'components/CustomComponent',
     files: [
       {
-        fileName: 'components/CustomComponent/CustomComponent.jsx',
+        fileName: 'components/CustomComponent/index.jsx',
         content: readExpectedTemplate(__dirname, './__fixtures__/component-vars'),
       },
       {
         fileName: 'components/CustomComponent/styles.scss',
         content: readExpectedTemplate(__dirname, './__fixtures__/styles-default'),
+      },
+      {
+        fileName: 'components/CustomComponent/CustomComponent.spec.jsx',
+        content: readExpectedTemplate(__dirname, './__fixtures__/test'),
       },
     ],
   },
@@ -52,8 +64,12 @@ const TESTS = [
     folderName: 'components/CustomComponent',
     files: [
       {
-        fileName: 'components/CustomComponent/CustomComponent.jsx',
+        fileName: 'components/CustomComponent/index.jsx',
         content: readExpectedTemplate(__dirname, './__fixtures__/component-default'),
+      },
+      {
+        fileName: 'components/CustomComponent/CustomComponent.spec.jsx',
+        content: readExpectedTemplate(__dirname, './__fixtures__/test'),
       },
     ],
   },

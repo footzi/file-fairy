@@ -51,9 +51,7 @@ class Template {
           return;
         }
 
-        if (file.usePathName) {
-          file.fileName = file.fileName.replace(/^[^.]+/, name);
-        }
+        file.fileName = file.fileName.replace('{{name}}', name);
 
         Template.validateTemplateFileFormat(file);
 

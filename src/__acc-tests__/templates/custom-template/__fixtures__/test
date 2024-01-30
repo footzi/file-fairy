@@ -1,0 +1,8 @@
+import { render } from '@testing-library/react';
+import { CustomComponent } from '../index';
+
+describe('CustomComponent', () => {
+  it('should render', () => {
+    render(CustomComponent);
+  });
+});

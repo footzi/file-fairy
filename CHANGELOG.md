@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.1.0
+- added {{name}} template to fileName
+- added lowerCaseFirstLetter handlebars util
+
 ### 1.0.2
 - fixed max depth for find root folder
 
