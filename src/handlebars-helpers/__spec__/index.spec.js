@@ -8,6 +8,12 @@ describe('handlebars-helpers', () => {
       expect(Helpers.uppercaseFirstLetter('testTest')).toBe('TestTest');
     });
 
+    it('lowercaseFirstLetter', () => {
+      expect(Helpers.lowerCaseFirstLetter('Test')).toBe('test');
+      expect(Helpers.lowerCaseFirstLetter('Test test')).toBe('test test');
+      expect(Helpers.lowerCaseFirstLetter('TestTest')).toBe('testTest');
+    });
+
     it('toCamelCase', () => {
       expect(Helpers.toCamelCase('some-component')).toBe('someComponent');
       expect(Helpers.toCamelCase('Some-Component')).toBe('someComponent');

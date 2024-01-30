@@ -52,10 +52,11 @@ E.g.:
 
 
 #### We can use the next helpers in template:
-1. `uppercaseFirstLetter` - capitalizes the first letter
-2. `toCamelCase` - transform text to camel case
-3. `name` - this name of your file from cli command. E.g. `ff gc my-temp ./src/MyCustomComponent` **name** will be equal `MyCustomComponent`
-4. `vars` - this object with your options from cli command. E.g. `ff gc my-temp ./src/Test --myVar=hello --skipTest` **vars** will be equal 
+1. `uppercaseFirstLetter` - makes the first letter uppercase
+2. `lowercaseFirstLetter` - makes the first letter lowercase
+3 `toCamelCase` - transform text to camel case
+4 `name` - this name of your file from cli command. E.g. `ff gc my-temp ./src/MyCustomComponent` **name** will be equal `MyCustomComponent`
+5 `vars` - this object with your options from cli command. E.g. `ff gc my-temp ./src/Test --myVar=hello --skipTest` **vars** will be equal 
     ```json
     {
       "myVar": "hello",
