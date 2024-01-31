@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.1.1
+- fixed export lowerCaseFirstLetter
+
 ### 1.1.0
 - added {{name}} template to fileName
 - added lowerCaseFirstLetter handlebars util

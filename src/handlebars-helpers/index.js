@@ -9,6 +9,10 @@ const init = () => {
   handlebars.registerHelper('uppercaseFirstLetter', (str) => {
     return Helpers.uppercaseFirstLetter(str);
   });
+
+  handlebars.registerHelper('lowercaseFirstLetter', (str) => {
+    return Helpers.lowerCaseFirstLetter(str);
+  });
 };
 
 module.exports = init;
