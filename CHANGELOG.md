@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.1.2
+- update package versions
+
 ### 1.1.1
 - fixed export lowerCaseFirstLetter
 
